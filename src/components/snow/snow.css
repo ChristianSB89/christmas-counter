@@ -1,14 +1,3 @@
-.hero {
-  background-image: radial-gradient(50% 176%, #253854 80%, #061922 100%);
-  min-height: 100vh;
-  min-height: 30rem;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
 .snow {
   position: absolute;
   min-width: 100vw;
