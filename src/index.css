@@ -10,11 +10,26 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+h2,
+h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--white-color);
+  -webkit-text-stroke: 2px var(--black-color);
+}
+
 :root {
+  --counter-font-color: #6e040e;
   --white-color: #d5d4da;
-  --dark-color: #1d1d1d;
-  --green-light: #124d22;
-  --green-dark: #07200e;
+  --black-color: #1d1d1d;
+  --light-btn-color: #124d22;
+  --dark-btn-color: #07200e;
+  --transparency: 10%;
+
+  --blur-bg: blur(10px);
+
+  --custom-border: 1px 2px 3px 2px;
 
   --transition: all 400ms ease;
 

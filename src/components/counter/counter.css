@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25em;
+  gap: 1.25em;
+  background: rgba(29, 29, 29, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 1.25em;
+  border-width: 1px 2px 3px 2px;
+  border-style: solid;
+  border-color: var(--black-color);
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-wrapper {
+  padding: 3.125em;
+  background: rgba(29, 29, 29, 0.1);
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(20px);
+  border-radius: 40px;
+}
+
+.counter-numbers {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--counter-font-color);
+}

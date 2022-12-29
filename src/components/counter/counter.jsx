@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import "./counter.css";
 
 const Counter = () => {
   const [days, setDays] = useState(10);
@@ -11,21 +12,29 @@ const Counter = () => {
     <>
       <section className="container">
         <h2>Det er</h2>
-        <div className="countdown">
+        <div className="counter-wrapper">
           <article>
-            <p>{days}</p>
+            <div className="number-wrapper">
+              <p className="counter-numbers">{days}</p>
+            </div>
             <h3>dager</h3>
           </article>
           <article>
-            <p>{hours}</p>
+            <div className="number-wrapper">
+              <p className="counter-numbers">{hours}</p>
+            </div>
             <h3>timer</h3>
           </article>
           <article>
-            <p>{minutes}</p>
+            <div className="number-wrapper">
+              <p className="counter-numbers">{minutes}</p>
+            </div>
             <h3>minutter</h3>
           </article>
           <article>
-            <p>{seconds}</p>
+            <div className="number-wrapper">
+              <p className="counter-numbers">{seconds}</p>
+            </div>
             <h3>sekunder</h3>
           </article>
         </div>
