@@ -36,5 +36,5 @@ article {
 .counter-numbers {
   font-size: 64px;
   font-weight: 700;
-  color: var(--counter-font-color);
+  color: var(--white-color);
 }
