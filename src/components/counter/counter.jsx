@@ -3,10 +3,10 @@ import React from "react";
 import "./counter.css";
 
 const Counter = () => {
-  const [days, setDays] = useState(10);
-  const [hours, setHours] = useState(10);
-  const [minutes, setMinutes] = useState(10);
-  const [seconds, setSeconds] = useState(10);
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
   const countDown = () => {
     const endDate = new Date("December 24, 2023 00:00:00");
