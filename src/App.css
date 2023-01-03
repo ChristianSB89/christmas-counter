@@ -1,6 +1,16 @@
 body {
   background-image: url("./img/background.jpg");
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
+
+@media screen and (max-width: 1024px) {
+}
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+
+@media screen and (max-width: 600px) {
 }

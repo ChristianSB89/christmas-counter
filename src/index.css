@@ -36,3 +36,20 @@ h3 {
   --container-width-md: 86%;
   --container-width-ms: 90%;
 }
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
+
+@media screen and (max-width: 1024px) {
+  .counter-numbers {
+    font-size: 40px;
+  }
+}
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+
+@media screen and (max-width: 600px) {
+  h3 {
+    font-size: 20px;
+    -webkit-text-stroke: 1px var(--black-color);
+  }
+}
