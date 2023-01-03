@@ -1,16 +1,39 @@
 import React from "react";
+import { useState } from "react";
 import "./addComment.css";
 
 const AddComment = () => {
+  const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]);
+  const onClickHandler = () => {
+    setComments((comments) => [...comments, comment]);
+  };
+  const onChangeHandler = (e) => {
+    setComment(e.target.value);
+  };
   return (
-    <section className="add-comment-wrapper">
-      <input
-        className="add-comment"
-        type="text"
-        placeholder="Legg igjen en julehilsen"
-      />
-      <button className="send-btn">Send inn</button>
-    </section>
+    <>
+      <section className="comment-wrapper">
+        {comments.map((text) => {
+          <section className="comment-bobble">
+            <p className="comment">{comment}</p>
+            <p className="timestamp"></p>
+          </section>;
+        })}
+      </section>
+      <section className="add-comment-wrapper">
+        <input
+          value={comment}
+          onChange={onChangeHandler}
+          className="add-comment"
+          type="text"
+          placeholder="Legg igjen en julehilsen"
+        />
+        <button onClick={onClickHandler} className="send-btn">
+          Send inn
+        </button>
+      </section>
+    </>
   );
 };
 

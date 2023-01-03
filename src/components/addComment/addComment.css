@@ -1,3 +1,75 @@
+.comment-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+  border-radius: 10px 0 0 0;
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 0;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding-bottom: 70px;
+  background: linear-gradient(
+    180deg,
+    rgba(29, 29, 29, 0) 0%,
+    rgba(29, 29, 29, 0.4) 50%,
+    rgba(29, 29, 29, 0) 100%
+  );
+  backdrop-filter: blur(5px);
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(29, 29, 29, 0.1);
+  border-radius: 0 10px 0 0;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--black-color);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.comment-bobble {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 8px;
+  word-break: break-all;
+  background: rgba(29, 29, 29, 0.3);
+  backdrop-filter: blur(5px);
+
+  border-radius: 20px 20px 20px 0px;
+}
+
+.comment {
+  width: 240px;
+
+  font-size: 16px;
+  color: var(--white-color);
+}
+
+.timestamp {
+  width: 60px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .add-comment-wrapper {
   display: flex;
   justify-content: space-between;
@@ -13,6 +85,9 @@
   backdrop-filter: blur(10px);
   height: 60px;
   border-radius: 20px 20px 0px 0px;
+  border-width: 1px 2px 0 2px;
+  border-style: solid;
+  border-color: rgba(29, 29, 29, 0.7);
 }
 
 .add-comment {
@@ -48,7 +123,16 @@
 
 /* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
 
+@media screen and (max-width: 1440px) {
+  .comment-wrapper {
+    height: 500px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .comment-wrapper {
+    height: 350px;
+  }
 }
 
 /* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
@@ -61,5 +145,8 @@
   .add-comment {
     height: 34px;
     width: 250px;
+  }
+  .comment-wrapper {
+    height: 400px;
   }
 }
