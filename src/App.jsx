@@ -5,7 +5,7 @@ import Snow from "./components/snow/snow";
 function App() {
   return (
     <body>
-      <Snow />
+      {/* <Snow /> */}
       <Counter />
     </body>
   );

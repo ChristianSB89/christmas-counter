@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import React from "react";
 import "./counter.css";
 
@@ -8,10 +8,36 @@ const Counter = () => {
   const [minutes, setMinutes] = useState(10);
   const [seconds, setSeconds] = useState(10);
 
+  const countDown = () => {
+    const endDate = new Date("December 24, 2023 00:00:00");
+    const today = new Date().getTime();
+
+    const timeDiff = endDate - today;
+
+    const seconds = 1000;
+    const minutes = seconds * 60;
+    const hours = minutes * 60;
+    const days = hours * 24;
+
+    let timeDays = Math.floor(timeDiff / days);
+    let timeHours = Math.floor((timeDiff % days) / hours);
+    let timeMinutes = Math.floor((timeDiff % hours) / minutes);
+    let timeSeconds = Math.floor((timeDiff % minutes) / seconds);
+
+    setDays(timeDays);
+    setHours(timeHours);
+    setMinutes(timeMinutes);
+    setSeconds(timeSeconds);
+  };
+
+  useEffect(() => {
+    setInterval(countDown, 1000);
+  });
+
   return (
     <>
       <section className="container">
-        <h2>Det er</h2>
+        <h3>Det er</h3>
         <div className="counter-wrapper">
           <article>
             <div className="number-wrapper">
@@ -38,7 +64,7 @@ const Counter = () => {
             <h3>sekunder</h3>
           </article>
         </div>
-        <h2>igjen til jul</h2>
+        <h3>igjen til jul</h3>
       </section>
     </>
   );

@@ -8,9 +8,9 @@
   text-decoration: none;
   /* text-align: center; */
   font-family: "Ubuntu", sans-serif;
+  overflow: hidden;
 }
 
-h2,
 h3 {
   text-transform: uppercase;
   font-weight: 700;
