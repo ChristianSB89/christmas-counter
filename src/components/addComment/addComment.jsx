@@ -15,7 +15,7 @@ const AddComment = () => {
     setComment(e.target.value);
   };
 
-  //------------------//
+  //==================//
 
   //Auto scroll to newest message//
 
@@ -25,20 +25,20 @@ const AddComment = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  //-----------------------------//
+  //=============================//
 
   //Timestamp//
 
-  let d = new Date();
+  // let d = new Date();
 
-  const today =
-    [d.getDate(), d.getMonth() + 1, d.getFullYear()].join("-") +
-    " " +
-    [d.getHours(), d.getMinutes()].join(":");
+  // const today =
+  //   [d.getDate(), d.getMonth() + 1, d.getFullYear()].join("-") +
+  //   " " +
+  //   [d.getHours(), d.getMinutes()].join(":");
 
   const data = useRef();
 
-  //---------//
+  //=========//
 
   return (
     <>
@@ -48,7 +48,10 @@ const AddComment = () => {
             <p className="comment" ref={data}>
               {text}
             </p>
-            <p className="timestamp">{today}</p>
+
+            {/* Timestamp deactivated due to updating all previous messages when typing */}
+
+            {/* <p className="timestamp">{today}</p> */}
           </section>
         ))}
       </section>
