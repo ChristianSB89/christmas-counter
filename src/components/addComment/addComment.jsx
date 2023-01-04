@@ -23,6 +23,13 @@ const AddComment = () => {
 
   //--------------------------------------//
 
+  let d = new Date();
+
+  const today =
+    [d.getDate(), d.getMonth() + 1, d.getFullYear()].join("-") +
+    " " +
+    [d.getHours(), d.getMinutes()].join(":");
+
   const data = useRef();
   return (
     <>
@@ -32,7 +39,7 @@ const AddComment = () => {
             <p className="comment" ref={data}>
               {text}
             </p>
-            <p className="timestamp"></p>
+            <p className="timestamp">{today}</p>
           </section>
         ))}
       </section>
