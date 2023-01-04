@@ -4,6 +4,8 @@ import { useState } from "react";
 import "./addComment.css";
 
 const AddComment = () => {
+  //Adding new message//
+
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const onClickHandler = () => {
@@ -13,7 +15,9 @@ const AddComment = () => {
     setComment(e.target.value);
   };
 
-  //Code for auto scroll to newest message//
+  //------------------//
+
+  //Auto scroll to newest message//
 
   const messagesEndRef = useRef(null);
 
@@ -21,7 +25,9 @@ const AddComment = () => {
     messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  //--------------------------------------//
+  //-----------------------------//
+
+  //Timestamp//
 
   let d = new Date();
 
@@ -31,6 +37,9 @@ const AddComment = () => {
     [d.getHours(), d.getMinutes()].join(":");
 
   const data = useRef();
+
+  //---------//
+
   return (
     <>
       <section className="comment-wrapper">
