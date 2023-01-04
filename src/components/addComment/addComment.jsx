@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import { useState } from "react";
 import "./addComment.css";
 
@@ -11,15 +12,29 @@ const AddComment = () => {
   const onChangeHandler = (e) => {
     setComment(e.target.value);
   };
+
+  //Code for auto scroll to newest message//
+
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  //--------------------------------------//
+
+  const data = useRef();
   return (
     <>
       <section className="comment-wrapper">
-        {comments.map((text) => {
+        {comments.map((text) => (
           <section className="comment-bobble">
-            <p className="comment">{comment}</p>
+            <p className="comment" ref={data}>
+              {text}
+            </p>
             <p className="timestamp"></p>
-          </section>;
-        })}
+          </section>
+        ))}
       </section>
       <section className="add-comment-wrapper">
         <input
