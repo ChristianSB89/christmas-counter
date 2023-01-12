@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/christmas-counter/static/css/main.a0f2afd8.css",
+    "main.js": "/christmas-counter/static/js/main.060e2653.js",
+    "static/media/background.jpg": "/christmas-counter/static/media/background.c024f318cfb91fc1d840.jpg",
+    "index.html": "/christmas-counter/index.html",
+    "main.a0f2afd8.css.map": "/christmas-counter/static/css/main.a0f2afd8.css.map",
+    "main.060e2653.js.map": "/christmas-counter/static/js/main.060e2653.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a0f2afd8.css",
+    "static/js/main.060e2653.js"
+  ]
+}
